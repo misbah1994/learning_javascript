@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code |code</title>
+    
+</head>
+<body style="background-color: #121212; color: #ffff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(languageName) {
+       const li =  document.createElement('li')
+       li.innerHTML = `${languageName}`
+       document.querySelector('.language').appendChild(li) 
+       //ab esko save kia to kch bhi nh hoga q k ye srf fun ki def h , yd h parha tha k kaisy def load hoti how engie works, ab es method ko chalana neechy
+        
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    //ye h bsc method which comes in mnd usually . to create elemnt, and innerhtml daal do, ab usy attch krdo, documnt mn attch krdo koi parent select kr k usky andr krdo, but in this a prob now we have only one value in list item, ab kya hota whn you say k apendchild krdo or elemnt ko slct kr k km mn lyty, to usy sara ka sara tree tryverse krna prta yhn to 1 tha agr 1000 hota to optimixation issue ajata, ab hm thora DSA ka use krty thora optimize way mn
+
+    //esmein bhi pehly create elemnt or hold  into varble, 
+
+    function addOptiLanguage(languageName) {
+        const li =  document.createElement('li')
+        li.appendChild(document.createTextNode(languageName))
+        document.querySelector('.language').appendChild('li')
+
+        
+    }
+    addLanguage("golang")
+    addLanguage("Ruby")
+//hmny 1 li lia or usmn apndchild ki konsa kia 1 new textnode creat kia or direct h usmn inject krdia, optimize way h ye , i recommend you this method for big project . when you use innerhtml to usmein treversing hoti pura ka pura tree, innerhtml k peechy mt bhagain always go for append child , achi approach h
+ 
+
+//oRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR ab esmein app chahn to 3rd line ko manipulate krskty 
+// function addOptiLanguage(languageName) {
+//         const li =  document.createElement('li')
+//         const addText = document.createTextNode(languageName)
+//         li.appendChild(addText)
+        
+        
+//     }
+//edit, edit k liye phly value ka slct hona zrori h, quiryslctor aya to j quiry mn tha but bht h powerful slctr, esmn bht sry css ka slctor bhi sme kam krty j.quiry k bhi same kam krty j.s k to kr h rhy hn
+
+const secondLang = document.querySelector("li:nth-child(2)")
+// secLang.innerHTML = 'mojo' //ye nh krna use
+const newLi = document.createElement('li')
+newLi.textContent = 'Mojo'
+secondLang.replaceWith(newLi) //yhn reference th to karllia uper rfrnc nh to quirslct s slct phr new child add krna para, agr reference hota to aram s hojata, q k elemnt exit kata to rfrnce lyna asan h
+
+//edit
+const firstLang = document.querySelector('li: first-child')
+firstLang.outerHTML = '<li>TypeScript</li>' //ye mjhy etna nh pasand
+
+//remove
+const lastLang = document.querySelector("li: last-child")
+lastLang.remove()
+
+
+</script>
+</html>
+
+<!-- app chaho to alg s javascript add kro chaho to body mn ya head mn, sir n body mn ki ab bara h bsc sa 1 trget h appko 1 or list item add krna h to app kahogy hm prnt ko slct krdaingy or  us prnt mein hm 1 or list item add krdaingy , list item ko add krny k 2,3 method h, sbsy pehly hm kya krty hn q k list item app kahi dafa add krwaogy, abhi j.s add krwae phr python krwaogy, phr typescript phir ruby, koi na koi or lang app add krwaogy to q na mn eska 1 fun design krlo, ab es fun ka nam h add lang, ab es fun mn lang name pass krogy,sabsyphly you hve to create list item, yhn uper jo ul list usko select or esmn  esko append krna --> 
+<!-- li.innerHTML = ${'languageName'} //abi ye hawa mn h, lakin kya faida agr value bhi add h, log krwaskty lkn abhi wo khn attach nh h
+document.querySelector('.language').appendChild(li)  //.laga k h appnd child krdia coz we have had value wrna alg s vrbl mn store krna parta -->
+<!-- how dom work behind the scene secret , optimize approach , pura tree  structure kaisy hota , node list kya kya ati 1,1 chz kaisy treverse hoti , node list h actually mn oura document objct model h hamary pass treversing , new elemnt -->

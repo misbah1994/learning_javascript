@@ -1,0 +1,152 @@
+<!-- //ab dom kya h document object model, ye jitna bhi appny webpage likha h , dykhain end of the day chahy app react use karain angular use karain jo appka documnt bnta h html bnta h ye ch object s h to bnta h ab obj kya h head hogaya body hogya, ab ye jo dom hota hai documnt obj model , yanii apkka jo documnt bana hua h ye kis model s bna hua h kya uska structure h, pge kesa dikhta ye sb agr appko smjh aagaya to app usmein manipulaton bhi krnylogogy we understnd reduce and also num ko add krny lagy hn agr ye smjh aagaya to mn es webpage s numbr bhi utha skta cart mn s un numbers ko add bhi krskta, 1 or document mn object create krskta hn, jiska mn naam dyskta some ya phir total or us cart mn jo uska pricing total h wo mn usy smjha k deskta hn, to bht kuch krskta agr mn documnt ko smjhlo, esky bad agr mn event ko smjhlo k 1 butoon click p kya hona chahye, kya process hona chahye web server p request jani chahye nh jani chahye ye sary events smjhlo to mjhy smjh ajega, ye tiyaari hamari projct ki trf jan ki h  
+div.bg-black kia, console mn ja  meiny likha console.log(window), to window 1 obj h to yhn bht chzain aati redox geo, window itself complex but we have to study more on documnts,coz this is obj so you can write console.log(window.document), ab dcmnt mn aya appky pass docmnt type , html , body, this is very cmn you dnt need to writte window.document again and again you can write only dcmnt console.log(documt) to appko drect access ml jata, you noticed agr mn window mn ja k ja k documnt ko access krta to 50 trhn ki chzain or dirct jany s nh ml rha, ap console.dir(documnt) to baqi infmtin mil jaegi, diagram: wndow=>document=>html ab html k 2 parts hn, meiny diag k through appko properties etc batae to appko selection mechanism mil jty, brendan Eich ki first heading mein sir n copy karwaya h1 meinsy id first heading or phir console mn sir n document. kia to aya getElemntbyid to yhn sir n (wo link paste) phir esny wo pura h1 ka prt dia ab ap espy manipulation bhi krskty hn ab mein innerHTML ko replace kar raha hn to document.getElementById("firstHeading").innerHTML = "<h1>chai aur code</h1>" ye basic core way h many people dont learn this method and jump into react, whn bhi yae hota lakin under the unhn pata h nh kal ko react hogya ghyb markt s to unki job bhi ghyb -->
+
+
+<!-- LECTURE 32, all DOM selectors, NODElist and HTML collection, in this video hm or elements ko kaisy pkr skty how to manipulate, kya kya use krskty to hold elements mtlb pkrny k liye, react etc mn nh krngy app q k whn apky liye laready attack krdeti h js khud h un elemnts ko or capture krlyti h, yhn hmmn manually khud krna h , thats why im saying js skills hamesha km ahegi react aj h kl nh, kl hoskta h angulr populte ho , kal swift populr h  -->
+<!-- humny DOM learning on chai aur code es elemnt ko select krna 1 dafa select krna jahy or stretegy smjh li to method ka naam pata krna phr chinnta ki bt nh, idhr id or clss don h pehly id s krty inpect p j k cnsole 5:00
+behind the scene document potray krha class ko className, hum .lagaky id ka nam or .lagaky className janskty, className q k jb app js mn html likhty specially react mn to hm class nh className likhty phli bt to ye conflict krna classname s or 2sri bt jb hm dom mein structr bnaty to classname h lkhty, app .getAttribute bhi ly skty, appko attribute ki val dega appko key pass krni appko val dega
+document.getElementById("title").setAttribute('class', 'test') hmny ye dia esny kha undefined lkn jb elemnt mn gahy to class mn set hogaya test ye hamesha overwrite karega
+ab hmny const title = document.getElementById("title") es trhn variable mn store kia ab easy access k liye hamary pass title vrbl agya h jisy mn easily valu niklwa skta, es title mn or bh style elemnt insert krskty app q k ye sara ka sara apky pss obj h hai to . sy app id class access krskty, title.style.background = 'green' estrhn dia whn, title.style.padding = '15px', title.style.borderRadius = '10px'
+11;30 kaisy content ko add kia jata, ab title.textcontent,title.HTML, title.text ye 3no appko same value deraha , dfrnce batata
+ title.innerText
+'DOM learning on chai aur code test text'
+title.textContent
+'DOM learning on chai aur code test text'
+ab hm span mn style add krty display : none
+ title.textContent
+'DOM learning on chai aur code test text'
+title.innerText
+'DOM learning on chai aur code'
+jb appny inner text kaha to wo aya jo actully mn visible h but usmn kch or bhi text h jo display propety s css s appny hatadia lkn textcontnt mn appko sara ka sara cntnt milta, dono sae h usecase p depend krta , 
+title.innerHTML
+'DOM learning on chai aur code <span style="display: none;">test text</span>'
+ye appko pura html ka value de rha, us k andr appny koi html likh rkha h to wo bhi milega appko es case mn wapis, to innerHTML appky  h1 , h2 tag wo sb bhi smny dyny to ye html tags ko bhi support krta, 
+abdykhty html class name, document.getElementsByClassName('heading') ye same waisy h hai
+now ab hm select kraingy quiryselector
+document.querySelector("h1")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector("h2")
+<h2>​Lorem ipsum dolor sit amet consectetur adipisicing.​</h2>​
+ab hm chahty hum id ko select krn, document.querySelector("#title")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+ye hmny class ki document.querySelector(".heading")
+<h1 id=​"title" class=​"heading">​…​</h1>​ ye lgn ko kafi acha lgta q k esmin APKY CSS k selectors kaam krty #,. ye sb
+document.querySelector('input[type= "password"]')
+<input type=​"password" name id fdprocessedid=​"bh3jch">​, 
+console mn css selector bht support karataye appki css selctr skills p depnd krta k appny kitni parhi, 
+document.querySelector('p:first-child') ye null aya q k tha h nh.
+
+document.querySelector('ul')
+const myUl = document.querySelector('ul')
+undefined
+myUl.querySelector('li')
+const turnGreen = myUl.querySelector('li')
+undefined
+turnGreen.sty
+undefined
+turnGreen.style.backgroundColor = 'pink'
+'pink'
+turnGreen.style.padding = '10px'
+'10px'
+﻿
+
+A form field element should have an id or name attribute
+to dom ko manipulate krna bht easy h if you know how to select or take value, abhi tk hmny 1 individual value ko select krny ki bt ki, 
+//ab hm quiryselectall karty
+document.querySelectorAll('li')
+NodeList(3) [, ab esmein prototype m apko forEach dia hua h, ab meiny prha h jb bhi ye arr hota to mn loop laga skta map call krskta to kar k dykhty, jo nodeList h or html collection h ye appky pure arr nh baz log ye ghlt smjh lyty
+to jb bhi app likhn uski proprty chk krain tempLIlist
+NodeList(3) edhr property mn prototype mn appko map nh milega, forEach to h, arrays mn appko bydefault map etc sb mlty
+jaisy liya myArr const myArr = [1, 2, 3, 4, 5]
+undefined
+myArr
+(5) [1, 2, 3, 4, 5]
+nodelist ko hm direct style nh deskty
+const tempLIlist = document.querySelectorAll('li')
+undefined
+tempLIlist
+NodeList(3)
+ [
+tempLIlist.style.color = "green" es trhn nh hoga mntion krna hoga square brkt mn
+tempLIlist[0].style.color = "green" //like this
+'green' 
+remmbr arr s mlta but h nh kafi khubiyn milti lkn
+//next
+const myH1 = document.querySelectorAll('h1')
+     
+undefined
+myH1
+ab h1 mn 1 h heading h lkin basic woi rahega app ko nodelist mili h app direct style nh krkty
+tempLIlist.forEach(function(l) {
+    
+})
+undefined
+tempLIlist.forEach(function(l) {
+    l.style.backgroundColor = 'blue'
+    
+})
+undefined
+//agr appko map lagana to convert krna hoga nodelist s arr mn phr jo chahy lgahn
+//now
+document.getElementsByClassName('LIST-ITEM') esmn appko return HTMLCOLLECTION mil rha jo appky nodelist s dfrnt h
+tempClassList.forEach(function(li) {
+    console.log(li)
+ab ye jo h usny kaha k ye to hai h nh, forEach nh km kr rha HTMLCOLLECTION P, nodelist p agr map use krna to convert krogy same usi trhn HTMLCOLLECTION ko bhi cnvert kraingy, ab humny convert kia Array.from sy ,tempClassList,
+Array.from(tempClassList), const myConvertedArray = Array.from(tempClassList),
+ myConvertedArray.forEach(function (li) {
+    li.style.color = 'orange'
+    javaScript wikipedia
+    const myH2 = document.querySelectorAll('.mw-headline')
+
+undefined
+myH2[0].innerText
+'History'
+myH2[1].innerText
+'Creation at Netscape'
+myH2[2].innerText
+'Adoption by Microsoft'
+dfrnce bw innertext and textcontent, innertext will only show what is visible on page and textcontent will show all the text even if its hidden due to any css property being applied to the tex
+    
+})
+
+
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM Learning</title>
+    <style>
+
+        .bg-black{
+            background-color: #212121;
+            color: #ffff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div ></div>
+    <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text</span></h1>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <input type="password" name="" id="">
+    <ul>
+        <li class="LIST-ITEM">ONE</li>
+        <li class="LIST-ITEM">TWO</li>
+        <li class="LIST-ITEM">THREE</li>
+        <li class="LIST-ITEM">FOUR</li>
+    </ul>
+    
+</body>
+</html>
+
+
+

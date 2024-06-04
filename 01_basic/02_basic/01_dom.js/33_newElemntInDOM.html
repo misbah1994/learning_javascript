@@ -1,0 +1,50 @@
+<!-- //in this vdeo we tlk abt parent chld rl, child child rl, and child prnt rl. these all rl helps you to add elemnt in dcmnt or elmnt creat krpahn , appny database mn quiry ki us database s kch value ae appny array mn store ki ab nxt kam unhn disolay karwana webpage p ab app unhn buttons mn krty ,cart mn karty its basic but how to display values, kesy new elemnts geerate krn kaisy remove krn, ye sb DOM ka khel h esmein majorly console log h krngy, es video mn hum scripting likhngy direct HTML k page p kb tk browser mn krty rhngy console log.
+div.parent, div.days*4,    
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | CHAI AUR CODE</title>
+</head>
+<body style="background-color: #212121; color: #ffff;"
+>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+    
+ </body>
+<script>
+    const parent = document.querySelector('.parent') //aisy kr k parnt lyty to prnt mn sari value milti, browserp consl p
+    console.log(parent);
+    console.log(parent.children); //interestng is k yhn hmn mila HTML COLLECTION jo almost array like property h , to app bhi es trhn parent ko slct krngy hoskta h app koi list elemnt lagana chhty hoskta prnt mn kch lagana chahty, ye interstng informtion h jo agy ja k hmry kam mn ahegi
+    console.log(parent.children[1]); //array like proprty h kuch proprty to milti hn loops etny nh mlty
+    console.log(parent.children[1] .innerHTML) //ensb s hmny jana k hmry pass ye jitny bhi elmnt hoty sbky ki n koi childrn hoty esi trhn app prnt bhi fnd krskty
+    for (let i = 0; i < parent.children.length; i++) {
+  console.log( parent.children[i].innerHTML);}
+//   parent.children[1].style.color = 'orange'
+//   console.log(parent.firstElementChild); //very importnt and usefull
+// console.log(parent.firstElementChild.innerHTML)
+// console.log(parent.lastElementChild.innerHTML)
+   const dayOne =  document.querySelector('.day')
+   console.log(dayOne);
+   console.log(dayOne.parentElement); 
+
+   //suppose agr appky pass already dayone rkha h kissi variable mn or usky through app chty k mjhty to prnt mn jana h to br br ye quiryslctor, QS ye thora expnsv oprtion h, pura perfrmnce kr rha thread k through jrha, akhr h kya dom pura ka pura 1 tree structr h to pury tree ko trevese krna , ap phr bolngy k yhn wps s dSA ki bt suru krdi, obvious s bt h pehly prodct h smjh aaraha h, tbhi ti DSA ka imprtnce smjh mn ahega, drct h tree ko traves krny lg ghy , 1 tree ko bina mtlb k gali dyny lg gahy, 1 tree ko bol rhy nh ye to bht acha h to aisa nh hota, smjh mn ahega khn yhn hm usy use kr rhy, pura tree model h to travese kr rahy to QS mn time lgta lakin ab pata h mn us, lkn ab pata h k mein usky drect parnt p h jana chhta to thora optimize krlyty, wapis s q tree travese krwaana, ab dayone to tha h uper to dauone s parentElmnt p chaly jaiye
+
+console.log(dayOne.nextElementSibling);
+console.log('nodes:', parent.childNodes); //appko nodelist mn value kitni dikh rae h 9, nodelist ya childnodes jitny bhi h wo actully mn pura 1 complex tree structure h, DOM documnt objct model ye pura 1 tree structre h, hr 1 chz ki 1 imprtnce h, jaisy ki parent k es div k bd appny 1 line break dia h wo bhi 1 node value h phir enter hua h phr next line mn to wo bhi 1 text node h, to ye sary node list hoti h, to hr 1 prnt or hr 1 elmnt h childnodes hoti ussy hmn pata chlta jo ye prnt div h, to browser bhnd the scene kitna complex tea structr bna rha thats people say hmn or optimiz javascript chye, q kweb eta optimize h h nh or hoga bhi nh kbhi q k ye bht sara kam krta lkn behind the scene krta
+//suppose appny kha mn to 1 or line enter krdga to ab ktni values woi 9 q k HTML mn 1 line break to count hota phir usky bd kitny line break dy browser usko render p h jata
+
+
+
+</script>
+</html>
