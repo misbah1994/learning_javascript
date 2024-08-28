@@ -9,6 +9,14 @@
 //     default:
 //         break;  //by default jhn bhi appka key match hogaya usky bad ka sara code execute hojata except default k , tabhi break lagaty app commnt kr k dykhlo
 // }
+// switch (key) {
+//     case value:
+        
+//         break;
+
+//     default:
+//         break;
+// }
 
 // const month = 3 //obviously si bt h appko 12 month k liye chk karna to if else if else, karskty ho koi problm nae bht time lagega to aisi situation mn hm switch statement chk karty
 // switch (month) {
@@ -19,21 +27,21 @@
 //     case 2:
 //         console.log('feb');
         
-// //         break;
-// //     case 3:
-// //         console.log('march');
+//         break;
+//     case 3:
+//         console.log('march');
         
-// //         break;
-// //     case 4:
-// //         console.log('april');
+//         break;
+//     case 4:
+//         console.log('april');
         
-// //         break;
+//         break;
     
 
-// //     default:
-// //         console.log('default case match');
-// //         break;
-// // }
+//     default:
+//         console.log('default case match');
+//         break;
+// }
 
 // //ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 
@@ -55,6 +63,31 @@
 //         console.log('april');
         
 //         break;
+    
+
+//     default:
+//         console.log('default case match');
+//         break;
+// }
+
+//my practice//////////////
+
+// const month = "march"
+// switch (month) {
+//     case 1:
+//         console.log('jan');
+        
+//         break;
+//         case 2:
+//         console.log('feb');
+    
+//         break;
+//         case 3:
+//         console.log('march');
+    
+//         break;
+//         case 4:
+//         console.log('april');
     
 
 //     default:
@@ -131,8 +164,8 @@
 
 // condition ? true: false //aksr log es ? ko dykh k smjhty ye bhi aisy h act karta to nae his design goal and pattern all is different
 
-const iceTeaPrice = 100
-iceTeaPrice >= 80 ? console.log("more than 80") : console.log("less than 80");
+// const iceTeaPrice = 100
+// iceTeaPrice >= 80 ? console.log("more than 80") : console.log("less than 80");
 
   
 

@@ -1,0 +1,49 @@
+javascript default
+=> synchronous mtlb 1 code execute hota usky bad 1 code usky bd 1 code, exception jb laty jb kch xtra cheezain hm involve krdety but bydefault synchronous
+=> single thread mtlb 1 h thread p sab execute hoga phr app khnogy slow lngug hoga hn bilkul cmprative other lag jismn multiple threads hn but kabhi bhi ye appko feel nh hony dyti k sngle threaded h q k bht sara kam delegate kr k wapis s bulaya jata h , sirf agr j.s ka engn app use krogy to execution chock hojata performnce chock hojati h but j.s ka engn akela mlta h nh achi bt ye ha wo jhn bhi milega run time environmnt mn milega wo run time environmn , wo node ka bhi or browser ka hi hoskta h 
+
+bht si langues mn asynchronous bhi hota multiple threads hoty 1 thread koi kaam 1 koi or kaam phr unsbko merge krdia jata 
+ye sari bt hogae default ki to default s to kam h nh chalta to usky bad jana prega execution context p
+
+
+*EXECUTION CONTEXT 
+=> execute one line of code at a time,  jaisy h fun aata uska context bnta 1,1 step by step hota 
+
+=>console log 1
+
+=>console log 2 
+
+jb tk purana  statemnt execute nh hogaya hai new statemnt p nh aata important bt ye hai , each operation waits for the last one to complete before executing , agla kam kb kraaingy jb peechla hoga q k thread to 1 he hai na , 
+
+call stack bhi h or memory bhi esky bry mn ziada bt nh karaingy q k hammin pata h k memory bnti hr br call stack hota h global execution context ata fun k top p aty jaty hn 1 stack milta whn p . 
+
+
+ab bt krty hai 
+
+BLOCKING CODE VS NON BLOCKING CODE 
+=> blocking code -> block the flow of program -> read file sync . mein appky liye pani lata hn app kuch mt krna jb tk 
+=> non-blocking code -> doesnot block execution -> read file async. app apna kam karo mn pani lata ho appky liye 
+
+agr appny khn enginerng mn ya kahn operating systm prha hoga to sbsy bara jo blockng code ya executing ya programmng lang k liye  night mare ata h wo files ko read krna agr app dirctly execute kr rhy ya mathemticall kr rhy to koi prob nh lakin jb file mein read kr k ao ya data ly k ao to prob hoti h , operating mn kya hota k file appka prog read nh krskta to file mn jo context h wo appko dena parhta h appky curnel ko phr kurneljata h us prog ya file ko access krta jo mtrial chahye read krta h phir read bad execution kia jata appky prog ko curnel s or phr bola jata kam hogaya , ye curnel to appky liye wait nh kr rha ruko 10 mint mera kam hojany do phr appka kam karengy bht request ati app jaisi hamary pass tb tk appka program kch nh krskta agr usy file read krni to 
+jb app sync way mn file read krogy waisy to j.s k pass etni browser mn power nh hoti k wo file ko read kr pahy node mn hm ye sara prhngy to file systm ka access appko node js mn milta h 
+
+jb bhi app blocking code likhty or khty file ko read kr k ao to jitna bhi usy time lagega 1 mnt 2 mnts  tb tk appka code or kaam nh kr paega 
+jb appny async read kia to jb tk baqi k kam kijiye jo bhi appko data chahye to mn appko notify krdnga 
+hamary pass user ka data aya hmn usy database mn store krna then user ko notifictin dena h jo bhi regster hua to mjhy mesg dena registration with success , mein non blockng code likhta hn app database mn save hoty rho to database kya h file h to read write kr rhy , end of the day file structre h jismn app read wrte kr k aarahy ho , jb tk wo data write ho k aaraha h app usy success messg dedo , hoskta h app jb write kr rhy koi error age ho appny user ko to mesg bhej dia to hmsha usecases hoty hmesha acha ya bura nh hota , to mn blockng case chhnga k jb tk mjhy meiry database mn entry ho k response nh mil jaega k succeful or not then i would like to mess user k succeful hua k nh 
+
+diagram 9;40
+js engine bnta hai 
+-> memory heap se 
+->call stack se 
+asli mn dykha jae to appka j.s engn bs yae h yae appka sara execution krta esi liye hmny esy executiin context mn prha th lkn jaisy app execution env dykhty ho browsr hogaya noode hog, deno un sb mn js engine nh h q k ye single threaded h , to etna prob hojata esmn k appko es trhn engn nh dia jata , appp lijiye weid engine h github p rkha h c++ p desing h but cmplx h kbhi uspy bhi chrcha krngy 
+
+web api ab webapi appko khn milegi ye browser k andr mlegi to webapi/node kabhi node bhi hota agr web api hogi to dom ka access milega , q k dom ka acces web ya browser mn hoga agr node ly rkha h to whn dom nh, 
+ab hai task quee ye jo tsk q h na ye  pury j.s ko etna fast or asynchronous banata h , srf etna nh appky pass promisses bhi hoty hn ye promises ki alg ques hoti jisy high priority quee khty es quee k bht sary naam h , app promis que bolo ya high prioeirty q,  s h diag hota nh alg execution hota but smjhny k liye 
+jb bhi prog execute hota uska 1 call stack banta h , usmn h global execution cntxt bnta or 1,1 kr k fun load kiye jaty , jaisy jaisy fun ka execution khtm hota un fun ko unload kr dia jata h , memory heap mn memory allocation hota h ye yhn rhta phly discuss hochuka 
+jb app asynchronous code likhty to app chahty koi aisa resourse ho ya aisa mechanism ho jisky ander mn appko khn k ye wala kaam kr k mjhy please bd mn yaad dila dena to wo mechnsim k liye hamary pass node api webapi available hoti 
+ab scenerio lyty appki jo asyn api hoti ye set time out, set interval or bhi available hoti h code kr k bhi dikhngy . set time out ex suppose es fun n appsy kaha mjhy set time out call krna h , ab set time out appko appki apis mn milega , node ya web apis mn to ye jo api ka box h yhn tranver krdia to esny kha thk h to async hai to esny kha baqi kaam krty rho jb bhi hoga mn yaad dila dnga appny call bola th k 2 mn bd yaa dilao, sto kya krta fun ka time out krdeta k 2 sec bd ye jo bhi bol rha  usy execute krdena , to appka 1 registerCallBack hota h usmn rgstr krdia jata h k ye kam krna 2min mn ye 2 sec mn or ye kisi evnt p, to appny hoskttta sto p call lagaya ya setintevl p ya browsr k evnt p click hoje load hoje hat jae ajae hower hojae to regstr k pass 1 task quee bhi hoti h ab ye kya krti h , appky js s jo prog ka execution th, uus prticulr set s  to bhr nkl gya , wps bhi dalna prega, pr kaisy dln bht log lie mn hngy , bht sara kam h app outsource krdaingy ye krlrna ye krdena , que mn last se data enter hota or front s bhr nikalta jata, stack mein  edhar s jo jaega edhar se h bhr ahega jo sabsy last mn ahega usy h bhr nikaldety, or que jaisy mcdonalds ki gariyan ati unhn burger dyk bhr nikaldia jata que ki job h wo callstack ko add krdeta, batahn ab app pehly hmny 1  consolle kia phr hmny kaha set time out k bd 0 time k bad 2 execute hoga (0,2) phr 3 kia to pehly kya hoga, to 1 to execute hojega phr app sochaingy k q k 0 time h to turant 2 execute hojana chahye  tha phr 3 to yhn p log ghlti krty q k ye jo appka set time out h na ye call ban k jaega phr lage ga phr add kia jaegg tb tk 3 execute hojaega, ye bs mnd mn dalna chahta flow k jb bhi ap stimeout krty chahy imediately to control whn jata mamla to ghom k ahega na .
+kch new api add ki gae h j.s mn fetch api, ye bhi task que p h kam kerti h , exact kam h eska bhi, hamari task que ko expand kia ya 1 dosri api lagadi gae app ye kh skty, jo k high priority ki h, fetch mn promise naam ka  1 concept h jo khta ye kam thori dair bd krdena agr hua succefl to bataden nh hua to bhi batdena aisy kam k result fetch k through aty, fetch k andr jo bhi proms q banti hn esmn bhi woi same call bck hoty hn wapis s callstck mn bethty bs ye high priority
+ba ab hm fast code likh skty hn , asynchr aisy hota await aisy kam krta or bhi data base k call bataonga
+
+
+

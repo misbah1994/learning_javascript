@@ -11,7 +11,7 @@
 // // myArr = ["h", "i"]
 // // myArr[1]
 // const mysym = Symbol("key1")
-// // const jsUser = {
+// const jsUser = {
 //     name: "misbah" ,   //by default system name ko string h process karta
 //     age: 18,
 //     // mysym: "mykey1", // symbol ko appny square bracket mn h likhna hoga or access bhi [] mein tabhi wi type of symbol dega warna string mein dega
@@ -22,6 +22,7 @@
 //     email: "misbahrehman@gmail.com",
 //     isLoggedIn: false,
 //     lastLoginDays: ["monday", "saturday"]
+// }
 
 
  
@@ -30,10 +31,32 @@
 // console.log(jsUser["full name"]);
 // // console.log(jsUser.mysym); // app eska type dain to string ahega es trhn , symbol nae ahega
 // console.log(jsUser[mysym]);
-// jsUser.email = "hitesh@chatgpt.com" //email change ki yahn
+// jsUser.email = "hitesh@chatgpt.com" //email chng ki yhn
+// console.log(jsUser.email);
+
 // Object.freeze(jsUser)  //yahn hmny email freeze kardi, kis obj ko freeze karna to jsuser ko. esky bad app jo bhi changes lagahngy wo propogate nae hoga error to nae dega lakin propogate nae hoga
 // jsUser.email = "hitesh@microsoft.com"
 // console.log(jsUser);
+
+
+////////*******************************************************************************8 */
+
+// const user1 = {
+//   Name: 'misbahRehman',
+//   FatherName: 'AbdurRehman',
+//   Email: "misbahrehman@gmail.com",
+//   Score: 100
+// }
+// console.log(user1);
+// console.log(user1.Score);
+// console.log(user1['Name']);
+
+// user1.greeting = function(){
+//   console.log("hello world");
+//   console.log(`hello JS user ${this.Email}`);
+// }
+// console.log(user1.greeting());
+
 
 // ab function add kart , js mein function mein koi discrimination nae hota as a variable app usy use karain
 
@@ -49,17 +72,17 @@
 // console.log(jsUser.greetingTwo());
   //*************************object part 2 */
 // const tinderUser = new Object() 
-// const tinderUser = {}              // dono mn koi internal difference nae print karny p dono empty obj daingy
+// // const tinderUser = {}              // dono mn koi internal difference nae print karny p dono empty obj daingy
 // tinderUser.Id = '123abc'
 // tinderUser.name = 'misbah'
 // tinderUser.isLoggedIn = false
-// // console.log(tinderUser); // singletone, costructor
+// console.log(tinderUser); // singletone, costructor
 
-// // const regularUser = {
-// //     email: 'misbahrehman@google.com',
-// //     fullname:{
-// //         userfullName:{
-//             // firstname:'misbah',
+// const regularUser = {
+//     email: 'misbahrehman@google.com',
+//     fullname:{
+//         userfullName:{
+//             firstname:'misbah',
 //             lastname: 'rehman'
 
 //         }
@@ -69,19 +92,35 @@
 // }
 // console.log(regularUser.fullname); //kahi br appko ? jaisa syntax bhi milega, ye thora protection kardeta suppose fullname afar exist h nae karta ho to, to kahi br api s response ata to ye syntax use karna parta username? agar ye value h to kariye , warna woi if else laga k
 
+//my practice****************************************************************************************8
 
-const obj1 = {1: 'a', 2: 'b' }
-const obj2 = {3: 'a', 4: 'b' }
-const obj4 = {5: 'a', 6: 'b' }
+// const score1 = {Amna: 100, Hira: 90}
+// const score2 = {Bilal: 10, Saqib: 60}
+// const score3 = {Tasmeena: 80, Alweena: 50}
+// // const FinalScore = Object.assign({}, score1, score2, score3)
+// const FinalScore = {...score1, ...score2, ...score3}
+// console.log(FinalScore);
+
+
+// arr lectr ka h ye concatinate wala, const all_heroes = marvel_heroes.concat(dc_heroes) // concatinate return karta new array to hamain esy new variable mein hold karna hoga to .push existing p lag jata. mostly not use this but use spread operator
+
+
+
+
+
+// const obj1 = {1: 'a', 2: 'b' }
+// const obj2 = {3: 'a', 4: 'b' }
+// const obj4 = {5: 'a', 6: 'b' }
 
 // const obj3 = {obj1, obj2} //aisy nae karna , woi arr wala h agar appko yaad ho
+// console.log(obj3);
 // const obj3 = Object.assign({}, obj1, obj2, obj4) // ye method app kam h use karogi,yahn empty paranthesis dena lazim h ye 1 optional parameter h ye jitni vale h combine hojagi or guranteed h result yae ahega, empty parantesis ko target man lo baqi obj1,2,3 ko source maan lo, empt paranthesis nae ho to ye obje1 mein jarahy hai result mn sae ahega lakin jaty
-const obj3 = {...obj1, ...obj2, ...obj4} //90% ye method karogy app spread operator
+// const obj3 = {...obj1, ...obj2, ...obj4} //90% ye method karogy app spread operator
 
 // console.log(obj3);
 
 
-// jab database s value ahegi suppose appky pass user ahe hain wo arr of object ahaingy[{}], arr mein bht sary obj hai appky pass appko loop through karna ya value print karni to ya  to app loop lagalain ya first value acces kaena user[1].email pehly first vale 1 obj h phir app .notation use karsakty
+// jab database s value ahegi suppose appky pass user ahe hain wo arr of object ahaingy[{}], arr mein bht sary obj hai appky pass, appko loop through karna ya value print karni to ya  to app loop lagalain ya first value acces kaena user[1].email pehly first vale 1 obj h phir app .notation use karsakty
 //  const user = [
 //     {
 //         id: 1,
@@ -103,15 +142,20 @@ const obj3 = {...obj1, ...obj2, ...obj4} //90% ye method karogy app spread opera
  
 //  // arr mn bht s obj hain
 // //  user[1].email
+// const tinderUser = new Object()
+// tinderUser.Id = '123abc'
+// tinderUser.name = 'misbah'
+// tinderUser.isLoggedIn = false
+// console.log(tinderUser); 
 
 
-//  console.log(tinderUser);
+
 //  console.log(Object.keys(tinderUser));
-// //jb bhi app object. karty to usy nae pata app kis obj p  run kar rahy, appko output value jo milegi uska datatype hai arr, app loop laga sakty espy kai jaga kam mn ly sakty. bht h interesting or ht he impo h 
+//jb bhi app object. karty to usy nae pata app kis obj p  run kar rahy, appko output value jo milegi uska datatype hai arr, app loop laga sakty espy kai jaga kam mn ly sakty. bht h interesting or ht he impo h 
 // console.log(Object.values(tinderUser));
 // console.log(Object.entries(tinderUser));
 
-// //kahi br ap obj mn pura loop through kar rahy or loop k bd 1 value nikal rahy, kahi dafa wo value exist nae karti to nae karti to crash k chances hoty ya to app manually dykhain ya app simply ussy puch bhi skty
+// kahi br ap obj mn pura loop through kar rahy or loop k bd 1 value nikal rahy, kahi dafa wo value exist nae karti to nae karti to crash k chances hoty ya to app manually dykhain ya app simply ussy puch bhi skty
 // console.log(tinderUser.hasOwnProperty("isLoggedIn"));
 
 // //obj declare kart huey kch aisy methods hoty jisky through app uski looping bnd karsakty, kahi br data base k doran aisa kia bhi jata specially
@@ -127,12 +171,59 @@ const obj3 = {...obj1, ...obj2, ...obj4} //90% ye method karogy app spread opera
 //     courseInstructor: 'hitesh'
 // }
 
-// // course.courseInstructor
-// // const {courseInstructor} = course  //agar appko ye courseinstr 3,4 dafa print karwana to br br likhna parega to ye method h 
+// console.log(course.courseInstructor);
+// const {courseInstructor} = course  //agar appko ye courseinstr 3,4 dafa print karwana to br br likhna parega to ye method h 
 // const {courseInstructor: instructor} = course  // appko agr courseinstructor bara nam lag raha to app apni mrzi s bhi naam desakty esi ko khty hm obj ko kstrhn destr karty
 // console.log(instructor);
 
 // console.log(courseInstructor);
+
+//my practice*************************************************************
+
+// const myUser1 = {
+//   Name: 'MirhaAmin',
+//   class: 'montessori',
+//   age: "03",
+//   fatherName: 'AminQadri'
+// }
+// const myUser2 = {
+//   Name: 'MinsaAmin',
+//   class: 'primary',
+//   age: "02",
+//   fatherName: 'AminQadri'
+// }
+// const myUser3 = {
+//   Name: 'MohammadAmin',
+//   class: 'Play',
+//   age: "01",
+//   fatherName: 'AminQadri'
+// }
+// const myUser4 = Object.assign({}, myUser1, myUser2, myUser3)
+// console.log(myUser4);
+// const myUser = {...myUser1, ...myUser2, ...myUser3}
+// console.log(myUser); 
+// console.log(myUser);
+// console.log(myUser.class);
+// const {fatherName} = myUser
+// const {fatherName : FT} = myUser
+// console.log(fatherName);
+// console.log(FT);
+// console.log(Object.keys(myUser));
+
+
+// const myUser2 = new Object()
+// myUser2.Name = 'Minsa',
+// myUser2.class = 'Primary',
+// myUser2.age = "02",
+// myUser2.fatherName = 'AminQadri'
+// console.log(myUser2);
+// console.log(myUser2.Name);
+// console.log(Object.values(myUser2));
+
+// const finalUser = {...myUser, ...myUser2}
+// console.log(finalUser);
+
+
 
 
 

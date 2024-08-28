@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body style="background-color: #414141; color: beige;">
+    <h2>amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="vase" src="https://images.pexels.com/photos/17266857/pexels-photo-17266857/free-photo-of-vase-with-flowers-and-cup-of-coffee.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""><li>
+            <li><img width="200px" id="street" src="https://images.pexels.com/photos/18173391/pexels-photo-18173391/free-photo-of-modern-colonnade-along-the-street.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="buildings" src="https://images.pexels.com/photos/24460824/pexels-photo-24460824/free-photo-of-esb-among-lower-skyscrapers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="motherhug" src="https://images.pexels.com/photos/20877343/pexels-photo-20877343/free-photo-of-smiling-mother-and-son-hugging.jpeg" alt="" onclick="alert('motherhug')">
+            </li>
+            <li><img width="200px" id="palace" src="https://images.pexels.com/photos/21533296/pexels-photo-21533296/free-photo-of-tetta-palace-in-venice-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    
+</body>
+<script>
+    // document.getElementById('palace').onclick = function(){
+    //     alert('palace clicked')
+    // }
+    // document.getElementById('palace').addEventListener('click', function(){
+    //     alert('palace clicked again')
+    // })
+    // attachEvent()
+    // jquery - on 
+    // document.getElementById('palace').addEventListener('click', function(e){
+    //     console.log(e);
+    // } .false)
+
+
+    //ab bt krty evnt propogation ki to true or false lyna parega to jb meiny true kia or app console mn dekhogy to appko zara bhi differenc nh pata lgega to phir event propogation h kya 
+    // event propogation ka 2 context hota h 1 hota h event bubling 1 hota event capturing ziada jo use hota hai wo default wala jisy khty evntbublng but in some scenerios you could use event capturing for these case ill give you 2 examples so you will clear how eventpropogation hota or how  app usy rok bhi skty 
+    //ye sb parhna hai
+    //type, timestamp, defaultPrevented mtlb default jo behaivior hota kisi bhi chz ka wo app chng krskty , jaisy jb app form submit krty to app khty defaulPrevent krdo tky submit na ho form , yhn tk k jo anchor tag hota h whn uska kam kya h click kia or navigate krwaya wo navigation bhi app rok skty , 
+    //target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altKey , ctrKey , shiftKey, keyCode ye jo keybords ki keys h en sbko bhi pehchanny k liye kuch speciall jo keys hai unka drct access mil jata k wo press hui k nh , keyCode jaisy appko 1 project banana k keyboard speed kiski kitni h 1 text dia user n keyboard kia to sae s type kr rha ya nh to whn js k yae basic foundations kaam aaty 
+    //
+    //19;49
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside the ul');
+
+    // }, false) //ye prnt hoga jb app imges k andr click yani ul k andr 
+
+    // document.getElementById('palace').addEventListener('click', function(e){
+    //     console.log('owl clicked');
+
+    // }, false)
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside the ul');
+
+    // }, true) 
+    // document.getElementById('palace').addEventListener('click', function(e){
+    //     console.log('owl clicked');
+
+    // }, true)
+
+    // document.getElementById('palace').addEventListener('click', function(e){
+    //     console.log('owl clicked');
+    //     e.stopPropagation()
+
+    // }, false)// ye click hoga jb app specifically palace p krogy 
+    //ghor s sunain jb app palace p clck kr rhy ho to palace bhi to ul k andr h hai wo ul wala bhi activate hoga q k ul mn li h or li mn images h , jb app palce p clk kr rhy to top wala code bhi activt hona chahye to muddy ki bt k pehly kya activity prnt hogi palace ya clicked inside ul , vase p click kia , street p or building p sbny dikhaya clicked inside ul q k espy 1 h evnt tha jb hmny palace p kia tophir 2 evnt thy uspy to phly owl clicked hua or phr inside wala, to sara evnt progation ka concpt hai event bublng, buble neechy s uper ata h , agr false hata bhi do to default h , ab jb mn true krnga to ye capturing hai ye jata h top sy bottom phly ul capture hua phir palace , koi sae or koi ghlt nh h eska use case app p depnd krta h app konsa use krogy ,, kahi br hm event ki bublng nh chahty react etc mn app prh rhy to jo top elemnt h uspy koi scrip laga rkhi k esy bhi trck krna to app chahty innerelemnt alag rh jae uska bubblng na ho or outer alg rh jae to whn appky kam ata ye jo e hai e.stoppropogation() esy execute krdaingy jaisy appka prevntdefault hota waisy h ye hota to appny palace p click kia to appka elemnt bubble ho k uper k elemnt p nh jaega 
+     // ye dono code hmny same likhy hain but hm target jo h wo differnt id ko krrhy remmbr, kaisy syntax kam krega konsa value kb print hota ye bht imp
+     
+     //ab hm google ka default behvir chng krdety abhi eska bhvr hai k google p click krta to ye mjhy google website p ly jata h . mn ye nh chahta 
+    //  document.getElementById('google').addEventListener('click', function(e){
+    //     console.log('google clicked');
+    //     e.preventDefault()
+    //     e.stopPropagation()
+
+    //  }, false)
+    
+//ab mn chahta ho ye jitny bhi li"s h imgs hai espy clck krn ye ghyb hojae, lkn esmn problms bht hoti es kam mn 
+// document.querySelector('#images').addEventListener('click',function(e){
+//     // console.log(e);
+//     console.log(e.target.parentNode);
+//     let removeIt = e.target.parentNode
+//     removeIt.remove()  //first approavch , img p karogy to 1,1 jaegi agr li p karogy to pura chalajaega 
+
+
+
+
+
+
+//     removeIt.parentNode.removeChild(removeIt)
+//     //actully mn jo method availble h wo h removechild , event ka trgt s kr k parentnode kia to usmein to li mila hamain , lkn agr li mein mein bolo removechild to srf img hata dega 1 or level upr jana parega 
+//     //jb meiny bola removeit ka prnt node do tb usny mjhy li sy ul dia or phr us ul ko meiny bola rmvchld konsa karo jo remove it mein mry pass aya 
+
+// })
+document.querySelector('#images').addEventListener('click',function(e){
+    // console.log(e);
+    console.log(e.target.tagName);//click kia IMG aya
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+    removeIt.remove() 
+
+    }
+    
+//ab img or id dono derha or ghyb horha h or li p krta to li ghyb nh horha ab k se or google p kia to execute hua q k hmny upr code ko comnt kia hua h 
+})
+//evntpropogation false nh lia coz default h, .parentNode kahi br aisy scenerios hoty hn k appko trgrt to mil gaya h pr app usky prnt ko slct krna chty jaisy hamamin jo remove karna wo image thori na krna hamain to pura li remove krna hoga wrna img to ghyb hojegi or bullet point reh jaega , hmmn pura li. to jo trgt hua uska parentnode chhye th  
+</script>
+</html>
+
+<!-- h2 mn likha amazing image then create div or usmein ul hai usmein listitems hain hr list item mein 1 img h jo mn laya pixels s  ye photos k sath hr k sath 1 alt tag introduce karwaya  or id bhi different ids pr last mn 1 list item h jhn google naam s link banaya hua h smjhyn mn kaam ahega, js mn jitny bhi evnts hoty hain wo sequentionlly h run hoty hn , kch exception h unpy hm bt krngy , j.s sequtionlly run lang buut hm sequentionlly ko ignore kr k bhi jaty jaisy asynchronous programming mn synchronous ki jga kuch kam deviate kr dyty , aisy exception appky browser k events bhi hn ye kisi activity p invoke hoty hn aisa nh hamesha sequentionally file mn like dia execute hojaega koi na koi activity hogi appny mouse hilaya keybord press kia ,drag n drop kia . or approach kya kya hai . 
+ log kya krty alt k bad onclick lagalyty suppose mjhy karna h alert owl , ye approach bilkul bhi achi nh q k ye hmny es style mn likha onclick ye feasible approach nh jb scale krega application to problm hogi es appro mn , app html mn inject mt kro avoid karo , react ka scenerio alg hota wo scalable code hota jb app onclick offclick p laga dyty wo alg frmwrk library h abhi pure j.s ki bt krty , ye appro chlti h lkn agy ja k prob degi to second approach  document.getElementById('palace').onclick = function(){
+        alert('palace clicked')
+    }  // es mn bhi prblm jb app id p onclick laga rhy to onclick mn kch prob hoskti hn q k appko bht ziada informtion nh milti h appko evnt listner use krny chhye q k wo srf onclick funtionality nh sirf blky propogation ki ability dety  esmein koi prob nh but ye appko features km deta . 3rd approch evnt listner very interestng and powerful keyboard , mouser drag anddrop sb evnt ko listen krskta , kabhi trallo ka clown banaya ya socha es bry mn whn drag evnt , ab yhn p 3rd parameter false bhi hota h likhna prta default bhi false h hota h , false h to likhny ki zrort bhi nh but khi br aisi applic bhi hoti h jo false or true likhy baghair complt nh hoti intervie mn puchty. document.getElementById('palace').addEventListener('click', function(){
+        alert('palace clicked again')
+    })
+    attach event bhi hota or ye kam ata th earlly time mn jb internet exploler ki bht mara mari hoti thi or mushkil hota th application ko internet exploler p chalana , esky elawa jQuery nam ka bhi 1 framework th jaisy aj app react k fan h  to jQuery mn direct onEvent laga k kam chl jata th , jQuery-on. 
+    to jb bhi app event p kam krty to , acha ye alert hata dyty ab hamain ye mlta object (e) ab jb log kia or cnsl mn dykha to palace p click kia hmain mila bht sary evnts pointerevent or bht esko jaisy opn kia ye 1 obj h ,bht values mlti or srcelemt bhi mlta . mostly aoppko browser or environment k type k evnts mlty , envrmnt evnt mouse n khn click kia konsi postion thi whn interviwe mn pucha jta kis tym p click hua etc, 1 application banado jhn user jis time p bhi img p ya body p click kr rha uska time batao basic sa interviwe mn khty log prshn hjaty k react mn kaisy krna react mn krna h nh tha , j.s ka 1 line ka code tha kahi br aisy ques bhi dety k 1 appli banao jhn 1 div ho us div mn , mein jhn bhi click krn 1 circle create hoj to jb event mn yhn appko uski width mil rae x,y position mil rae client ki to app jhn bhi click kia location appko mil rae us location p 1 naya evet create krdo  or 1 browser elmnt div circle etvc jo bhi usny kaha 
+
+
+  -->

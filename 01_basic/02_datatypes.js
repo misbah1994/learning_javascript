@@ -1,3 +1,12 @@
+//datatypes
+//primitive
+//non primitive/reference type
+//differenc is if you learn any lang before like C etx . 1 cncpt hota h call by value or call by referenc . diffrnce hai k ye jitna data h ye memory mn kis trhn store hota kaisy access krty, esi bases mn 2 categories officially ki gae h .
+//call by value means jb bhi appp esko copy krty ho to jo eska originl data hai wo reference appko memory ka nh dia jata wo copy kr k dia jata h.jo chnges appny krny wo copy mn hngy 
+
+//symbol; kisi bhi value ko unique banany k liye use krty hn especially jb app adv fronthand or backend krngy to whn 1 componnt ko khi jaga use kr rhy hoty h to khn aisi requiremnts hoti h k pata krna h k ye button h ye sb h esy unique banana to us doran usy 1 symbol mn wrap krdyty wo unique bn jata. 
+
+
 "use strict"; // treat all js code as newer version
 
 // alert(3 + 3) // we are using nodejs not browser
@@ -29,12 +38,12 @@
 //    console.log(typeof false);
    
 
-//    let score = "misbah"
-//    let valueInNumber = Number (score)
-//    console.log(typeof valueInNumber);
-//    console.log(valueInNumber);
+   // let score = "misbah"
+   // let valueInNumber = Number (score)
+   // console.log(typeof valueInNumber);
+   // console.log(valueInNumber);
 
-//    console.log(typeof (NaN));
+   // console.log(typeof (NaN));
 
 // let isLoggedIn = ""
 
@@ -56,24 +65,24 @@
 
 // let value = 3
 // let negValue = -value
-// // console.log(negValue);
+// console.log(negValue);
 
 // let str1 = "hitesh"
 // let str2 = " hello"
 // let str3 = str1 + str2
-// // console.log(str3);
+// console.log(str3);
 
-// // console.log("1" + 2);
-// // console.log(1 + "2");
-// // console.log("1" + 2 + 2);
-// // console.log(1 + "2" + "2");
+// console.log("1" + 2); // agr strng nh to start ka karega addition usky bad string nh karega or agr string k bad add hobhi rha to nh kreg
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);
+// console.log(1 + "2" + "2");
 // console.log(1 + 2 + 3);
 // console.log(1 + 2 + "3");
 // console.log(1 + 2 + "3" + 2 + 2);
 // console.log(1 + 2 + 4 + 5 +"3" + 2 + 1 + 3);
 // console.log("1" + 2 + "3" + 2 + 3 + 4 + 6);
 // console.log(1 + 2 + "3");
-// ecma p conversion
+// // ecma p conversion
 // console.log(true); 
 // console.log(+true); //no sense, dont use
 // console.log(+false); // dont use
@@ -85,7 +94,7 @@
 
 // let gameCounter = 100
 // ++gameCounter;
-// // console.log(gameCounter);
+// console.log(gameCounter);
 
 // let gameCounter2 = 99
 // gameCounter2++;
@@ -100,11 +109,11 @@
 // console.log("2" > 1);
 // console.log("02" > 1);
 
-console.log(2 > 2)
-console.log(null == 0);
+// console.log(2 > 2)
+// console.log(null == 0);
 console.log(null > 0);
 console.log(null != 0);
 console.log(null >= 0);
 console.log(undefined != 0);
-console.log("2" === 2);
-console.log(2 === 2);
+// console.log("2" === 2);
+// console.log(2 === 2);

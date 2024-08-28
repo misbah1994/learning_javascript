@@ -1,11 +1,35 @@
 //for loop with break and continue in javascript.
 //loops second name iteration, iterators phython mn appny app mn 1 concept h. in programming there's many ways to do 1 thing to loop k bhi 4,5 ways h, for loop agr forloop sekh lia to phython ho ya js kahani same h ha, ab for loop ka syntax kaisy seekhi to sbsy smple 1 se 10 tk num print karwaiye adhi khni wahnclear
 
+//myprctc
+
+// for (let i = 0; i < 10; i++) {
+//     const element = i;
+//     if(element == 5){
+//         console.log("5 is the best number");
+
+//     }
+//     console.log(element);
+    
+// }
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`outer loop is ${i}`);
+//     for (let j = 0; j <= 10; j++) {
+//         console.log(`inner loop is ${i} and outer loop is ${j}`);
+
+        
+        
+//     }
+// }
+
+
+
+
 //for loop alg alg jgh bara jump kar kabhi khn eska control flow kabi khn, jaisy hmny fun mn dykha th k call kr rhy to flow whn chala gaya fun ki def p, whn fun execute hua phr wapis s yhn aya
 
 // //sbsy phly appko nzr ani chahyee ye curly braces , 1 blockscope hamary pass aya to jo bhi esky andr declare hog or esky through dclr hog, wo agy j k appky km mn nae ahegi
 
-// //yhn 1 .index
+// //yhn 1 .i
 // declare horaha h let .index
 //  = 0 , abhi app es .index
 //  ko {} k bhr print karwhn to uska access nh hog, how to read it first variable declared here .index
@@ -59,15 +83,66 @@
 // // j  kandr i value ka access h q k app i k andr h, sbsy pehly thi val 0 to inner loop mn gahy to inner 10 br print hog, q k andr k loop ko to 10 br chlna h th
 
 // for (let i = 0; i <= 10; i++) {
-//     console.log(`outerLoopValue: ${i}`);
+//     // console.log(`outerLoopValue: ${i}`);
 //     for (let j = 0; j <= 10; j++) {
 //         console.log(i + '*' + j + '=' + i*j);
+        
+
         
         
 //     }
     
 // }
-// //ab hum 1 arr bhi declare krlyty, ab ye loop , myArr p lg gaya simply waisy array p lagany k liye or better structure h j.s mn but basic hm dykh lyty, ab hmn pata h arr ka index 0 s strt hota h, kb tk chlana es index ko jb tk ye arr ki lngth s wo chota rhy.
+// for (let i = 0; i < 6; i++) {
+//     console.log(`outer loop is ${i}`);
+//     for (let j = 0; j < 5; j++) {
+//         console.log(i + '+' + j + '=' + i+j);
+        
+        
+//     }
+    
+    
+// }
+
+
+
+// for (let i = 
+
+
+//practice
+// let fruits = ["apple", "banana", "cherry"];
+
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+
+
+// let subs = 20;
+
+// for (let i = 1; i <= 5; i++) {
+//   subs -= i;
+// }
+
+// console.log("Subs:", subs); //run 5
+// let sum = 2;
+
+// for (let i = 1; i <= 5; i++) {
+//   sum += i;
+// }
+
+// console.log("Sum:", sum); //run 17
+
+//Print numbers from 1 to 5
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i);
+// }
+
+// Print numbers from 1 to 5
+// for (let i = 1; i <= 5; i++) {
+//   console.log(i);
+// }
+
+// //ab hum 1 arr bhi declare krlyty, ab ye loop , myArr p lg gaya simply waisy array p lagany k liye or better structure h j.s mn but basic hm dykh lyty, ab hmn pata h arr ka k 0 s strt hota h, kb tk chlana es index ko jb tk ye arr ki lngth s wo chota rhy.
 
 //array ki lenght 3 hai humny ussy less chalaya h, <= nae likha q k arr mn flash 0 h, <= agr aisa krdngy to app arr s bhr h chle gahy to aisa karna to thk nae h to undefined milega appko , j.s mn out of bound exception nae hoty h, but ye undefined in itself big problematic thng, remembr ye undefined nae ana chahye
 
@@ -75,9 +150,36 @@
 
 // let myArr = ['flash', 'batman', 'superman'] 
 //  for (let index = 0; index < myArr.length; index++) { 
-// //     const element = myArr[index];
-// //     console.log(element);
-// // }
+//     const element = myArr[index];
+//     console.log(element);
+// }
+
+// let fruits = ["apple", "banana", "cherry"];
+
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits);
+// }
+
+
+// let fruits = ["apple", "banana", "cherry"];
+
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
+// let myNum = ['one', 'two', 'three', 'four']
+// for (let i = 0; i < myNum.length; i++) {
+//     console.log(myNum[i]);
+    
+// }
+// let myNum = ['on
+
+// let array = ['one', 'two', 'three', 'four']
+// for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+//     console.log(element);
+    
+// }
+
 
 // let myArr = ['flash', 'batman', 'superman'] 
 // console.log(myArr.length);
@@ -110,6 +212,15 @@
 //     console.log(`value of i is ${i}`);
     
 // }
+
+// for (let l = 0; l < 10; l++) {
+//     if(l == 5){
+//         console.log('8 detected');
+//         break
+//     }
+//     console.log(`value of l is ${l}`);
+// }
+
 // break s control execution ko seedha h bhr phnk dyty ho, to baqi ka print nh hoga
 
 // 5 jaisy h detect hui appky loop n km krna h bnd krdia app seedhy jmp krghy line 40 k bhr// hmny swich cse mn bhi dykha th k jhns s bhi brak aajata whn s control flow pura bhr chala jta h, usky bd kuch execute nh hota, agr whn break nh hota to default etc sb h print hojaty, 
@@ -135,9 +246,30 @@
 //     console.log(`value of index is ${index}`); // ab incrmnt dcrmnt kuch to krna hg wrn loop phr s infinite mn chala jaega, aisi cindition lkhn jo termnte krti ho loop ko zaroori nh incrmnt or dermnt h
 //     index = index + 2
 // }
+// let index = 10
+// while (index >= 10) {
+//     console.log(`value of index is ${index}`);
+//     index = index + 2
 
+    
+// }
+
+let myArray = ['flash', 'batman', 'superman', 'spiderman']
+let Arr = 0
+while (Arr < myArray.length ) {
+    console.log(`value is ${myArray[Arr]}`);
+    Arr = Arr + 2
+    
+}
 // let myArray = ['flash', 'batman', 'superman']
-// let Arr = 0
+// let Arr = 1
+// while (Arr < myArray.length ) {
+//     console.log(`value is ${myArray[Arr]}`);
+//     Arr = Arr + 2
+    
+// }
+// let myArray = ['flash', 'batman', 'superman']
+// let Arr = 02
 // while (Arr < myArray.length ) {
 //     console.log(`value is ${myArray[Arr]}`);
 //     Arr = Arr + 2
@@ -156,10 +288,10 @@
 // } while (score <= 10);  //ab kb tk prnt krwana
 
 
-let score = 11
-do {console.log(`value is ${score}`);
-    score++ 
-} while (score <= 10);  
+// let score = 11
+// do {console.log(`value is ${score}`);
+//     score++ 
+// } while (score <= 10);  
 // run kia aya score is 11 q k esmein kam pehly hota condtn bd mn chk hoti, aj udhar dedo kl wapis dydngy, ary mry ps to pisy h nh.
 // rare use hoga usually we prefer to chk conditin first, regulr flows mn but yes exception sb jgh h// 
 // ye hogya hmara basic now we h loop jo specialixd h, array p loop lagany k liyr, bht comon h arr p loop lagana jb bhi app database s value fetch krgy 10 values 5 vlus , theycome always in arr formt, apis mn appko array ki frmt mn dyny, arr p lop bht cmn h to kuch specialzed loop banhy gah, kch arr ki drct propertes bhi hoti h lops k liye availbl

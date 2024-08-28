@@ -1,0 +1,39 @@
+<!-- // lecture 46 bind in js 
+//story , theres a time jb react new mrkt mn aya th react vrsion 1 bhi nh th infct '.' mein chl raha th , kafi lgn k pass early access agya th repo ka or repo populr horhawe thi mrkt mn , fb n kch launch kia h bht h ghzb h react hai kuch virtualDom ka kch cncpt lahy hn page reload h nh hota , jQuery s b acha h bettr implemnttion h bht light weight h bht fast h bht revolationry, us time p ye jo appky cncpt h 'call, bind, apply us time p abstrction nh lagaya gya th react mn , to us time p kam kaisy hota th batata hn to yae sabsy achi exmpl h bind ko smjhny k liye , to andaza hoga appko phly k time p jb react . mn th jb to vrsion bhi nh tha to kaisy chlta t bind k liye html file bnegi not j.s  
+//us time p script nh hoti thi app react ka drct h 1 projct initialize krskty thy bundlr etc kafi thy whn unpy kbhi discuss krngy , suppose unhn ny bts kya kia 1 clas baae thi  , app bhi kch es trhn s krty thy kch mthd to unhn ny lkh diye thy , bqi hmn lkhny parhty thy k buttn p krny k bd kya ho form data clct ho server p jhy  wo sb to hmn krna bsc req to nh daingy, to suppse unhn ny react ki 1 cls bana k dedi , cnstrctr mn wo vriable etc declare krlyty thy this.servr ki valu h define krdi ya this.library or hardcode kr k library ki value dedi k react ki librrry app use kr rhy , servr ki vlu dedty thy wo abhi bhi dety to bydefault servr strt hojata h, cnstrctr k elwa bhi appko mthd decl krny hoty thy to i wnt k jaisy h ye page load ho appka 1 obj create hojaw  react ka , to const app krky obj banalia ab mn chahta ho, ab mn chahta ho jaisy h ye kam hojae  , ye jo mera butn h es butn ka mjy rfrnc ml jae , or 1 mthd ho jo ho hndle clck ka to form click hogaya h ya submt hogy kch msg krde, jb hm drct btn p h on click likhty thy <button onClick={handleClick()}>Button Clicked</button> , ya phr arrow fun k sth wo bhi 1 syntax hota h jb prhaingy to appko batadaingy to wo code chlta h nh th q k ska 1 syntx or th appko pata hona chahye bts , to aisi situation k liye appky pass 1 spcial kw hota h bind , wo kw call nh h blky bind q k appko manually forcefully sirf bind ka rfrnce nh dena h us bink ko bind krna wo kw actlly mn bata rha k usy attch kro appny sth , to ab bind kia  bind(this) , to ab jo ye hndleclck th wo chla gya sath mn app ny ye this bhi bhj dia , jo bhi vriables h fun h wo bhi usky sth attch ho k chle ghy , lkn unhn ny kuch ovrrgt nh kia , jo pakka btn ka rfrnc h hndleclck mn kisny clll kia to btn n cll kia to uspy tbhi to clck chlega wrna to khn bhi chlega , to bind ka sbsy acha ex h react ka , to ab appky pass clk p btn clk bhi h or react mn librry or servr sabka access h , to appko srf servr ka lyna h to this.servr lyln bas 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button> 
+    
+</body>
+<script>
+    class React{
+        constructor(){
+            this.Library = 'React'
+            this.server = 'https://localhost:300'
+            //requirmnt, rfrnce ml jae or click hojae ,click krny p , conl log ajhn ya form sbmt hojae
+            document.querySelector('button').addEventListener('click', this.handleClick.bind(this))
+        }
+        handleClick(){
+            console.log('button clicked'); //btn clk to mein krna chah rha hn ab mein ye kch librry or servr enhn bhi access krleta hn to pata lgega k access ho bhi prhy ya nh to this.servr, documnt. s kch manual code laingy queryslctr s waisy to internl react mn ja k dykhngy to react list s lia jata h 
+            console.log(this.server);  //this ka rfrnce kahin kho gya to esy undefined mil rha , agr mn sirf this kr rha hn to buttn ka rfrnc to arha h 
+            // console.log(this); //sir n last mn bs this.servr ka h access lia es this ko cmnt kardia blkul last mn,  //this kssy arha h to jis n call kia to kisny call kia es docmnt n button n to eska rfrnc to arha h 
+            
+            
+            
+        }
+    }
+    const app = new React()
+</script>
+</html>
+
+<!-- lecture 47
+//j.s mn math.pie ki value hoti h 3.14 mjhy usy krni h 4 ya phr 3 , kch log bolngy k nh to q bolngy wo cnstnt h to appko js ka bts nh pata kya chl rha to app jwb nh depaogy  -->

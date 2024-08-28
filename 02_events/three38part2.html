@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const sayDate = function(){
+    //     console.log('hitesh', Date.now());
+
+    // }
+    // setInterval(sayDate,1000)
+    // orrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+
+//     const sayDate = function(str){
+//         console.log(str, Date.now());
+
+//     }
+//    const intervalId =  setInterval(sayDate,1000, 'hi')
+   
+    // ab ye jo setintervl h yhn parameters bhi pass hojaaty hn suppose meiny kaha 'hi' to uper fun mn parametr dydain k 1 str aarae h hamary pass or jo bhi num aaraha jo b str as it is print krwado , ab hamary pass clearinterval h esy rokny k liye to ye bhi rfrnc mangega
+    // clearInterval(intervalId)
+
+
+//     //orrrrrrrrrrrrrrrrrrrrrrrrr my practice
+//     let stopInterval;
+
+//     const myDate = function(str){
+//         console.log(str, Date.now());
+//     }
+//     // const startInterval = setInterval( myDate,1000, 'misbah')
+
+//    const startPrinting =  document.querySelector('#start').addEventListener('click', function(){
+//         console.log(start);
+//         const stopInterval = setInterval( myDate,1000, 'misbah')
+
+//     })
+//     document.querySelector('#stop').addEventListener('click', function(){
+//         console.log('clicked');
+//         clearInterval(stopInterval)
+
+        
+//     })
+
+//////////////oRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRrr
+
+//achi prctc h agr null kr k if laga dain 
+
+   let intervalId;
+   const myDateName =  function(str){
+        console.log(str, Date.now());
+
+    }
+
+    // setInterval(myDateName, 1000, "misbah")
+
+    function startPrinting(){
+        if(!intervalId){
+            intervalId = setInterval(myDateName, 1000, "misbah")
+        }
+    }
+    function stopPrinting(){
+        clearInterval(intervalId)
+        intervalId = null
+    }
+
+
+    document.querySelector('#start').addEventListener("click", startPrinting);
+    document.querySelector('#stop').addEventListener("click", stopPrinting);
+    console.log(document.querySelector('#start').addEventListener("click", startPrinting));
+    console.log(document.querySelector('#stop').addEventListener("click", stopPrinting));
+
+    //api kya krta h api 1 talkng lang h 2 systm k bech mn ye backend or frontend bhi hoskta h , ye backnd kisi or ka or frontend hamara hhi hoskta h , hosta h appky 2 systm aps mn bt krna chahty hn 1 java mn likha hua or 1 javscript mn , 1 ruby mn 1 php mn to en dono k bech mn bt karny ka madiam hota wo api hota , sabsy famous jo api h wo apigithub ki h kafi log use karty app api.github likhogy to yhn sari apis rhti /users or agr appka github p account h to app bhi es trhn access krskty , formt yae hota 1 bara sara obj milta or usi mn values hoti , randomuser.me ye bhi famous api h ye api prhny k liye 1 formatter h JSON formator , mjhy kafi pasnd h yhn app formt/beautify krskty hn , wrna direct randmuser.me sy url ly k copy kr k json frmtr mn paste kia to phir whn code h usy khola to alg formt h to phr tree banaya or usmn 1 obj h usmein 2 properts first result h wo 1 arr h or phir info h wo khud appny app mn bj h ab agr es result ko m kisi obj ya variable mn rkhta hn to mjhy pata h result ka mjhy 0th elmnt access krna [1] , 1 h elmnt h arr containing 1 item ab frther expnd kr k dykha 0th position p 12 elmnt h gender name location ab mjhy pata h name dirct nh milega fuether mjhy drilling krni hogi 1 or objct h esmn name . laga k title ya frst name to es trhn h appko api prhni prti h week lag jata 10mints etc 
+    
+</script>
+</html>

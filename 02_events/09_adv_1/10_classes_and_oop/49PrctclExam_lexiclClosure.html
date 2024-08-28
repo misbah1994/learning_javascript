@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical example lexicl and closure</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    
+</body>
+<script>
+    // onclick ko 1 fun chahye hota h 
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }  //agr 500 ho to kaisy kya 500 times copy krna hoga , to hamara jo , to hm ab clinkhndler banty esko chordety ab hm generic likhngy k konsy button p click hua h , ab clckhndlr h hamary pass to hr br ye nh krngy , seedha mthd h hamary pass usmein value pass krngy or kam hojaega , rfrnce to lyna hoga no exception phir loop woop laga skty wo bt ki bt h 
+
+    // function clickHandler(color){
+    //     document.body.style.backgroundColor = `${color}`
+
+    // }
+    // document.getElementById('orange').onclick = clickHandler('orange')
+    // document.getElementById('green').onclick = clickHandler('green')
+    // ab prob kya ae h apny esy fun nh fun ka rfrnce dia h , fun k rfrnce ka mtlb h mn appko def dydydta hn , onclick ko executble chahye click, to mein expect kr rha th k app mjhy fun dogy appny to kha k fun execute h krdo clickHandler('orange') es trhn 
+    ///////////////////////////////////////////////////////////////////
+    //to hmn actually mn eski def ko chnge rna hoga or fun likhna hoga , agr appko lexicl or closure scopng nh pata hota to hor s dykhn yhn ho kya rha h kam, clckhndler jo bhi value return aarae h wo onclck ko pass kr rha h , to ye jo clickhndlr mn clr h eska access es retrn fun k pass hai hn hai agr appko closure pata h , srf return uth k bhr nh jata pura uska lexical scope jata h , ab hamara code wrk krega 
+
+    function clickHandler(color){
+        return function(){
+             document.body.style.backgroundColor = `${color}`
+        }
+
+    }
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+    
+
+
+</script>
+</html>
+
+<!-- prctcl exmple kr rhy hn hm yhn , ye 1 usecase scenerio h jhn closure n appko bachaya h  -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // ab es fun ka app ref bhi de skty execute mt krwadiyega , saymyName() es trhn execute hojae to srf sayMyName q k hndler h ref do
+    const sayMyName = function(){ 
+        console.log('hitesh');
+    }
+    setTimeout(sayMyName, 2000)
+
+    // ab mn chai aur code ka nam chng karnga
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = 'BEST JS SERIES'
+    }
+    // setTimeout(changeText, 2000)
+    //you see many time in different websites you stay wbsite and then popoup come or maybe brar come at top hamara discount chl rha , sto ko rok kaisy skta hn agr utni dair mn evnt nh hua to rok kaisy skta hn , maybe a situation you want to stop  that event so how agar mn 2 sec s phly button click krdn wo chai aur code h rhy
+    
+    // ab clear time out, clearTimeout() aise nh hota it wants Reference, konse sto ko app hatana chhty to rfr
+    const changeMe = setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click',function(e){
+        clearTimeout(changeMe)
+        console.log('stopped');
+
+    })//abhi to kam kr rha lkn jb meiny whn jaa k stop kia to rok dia hony s 
+    // clearTimeout(changeMe)// to mn koi evnt p lagana chahta esy 
+
+</script>
+</html>
+<!-- sto 1 mthd h ye 1 api ko call krta h to wo bhi 1 imp or interstng aspect h , app jb window likhogy browser mn to kafi vlu mliti es mein sto or set intervl ye actully fun h but core fun nh ye browser k through appko mlty , jaisy js mn callstck or memory h ye lkn jb call hota to ye bhr jata h , esky elawa clear interval h , clea time out h ye actually mn part h h enn dono fun k, sto kya krta jb app espy hawer krogy to esy sbsy phly chahye handler , handler, callbck, fun ye term h j.s mn  almost same h kisii ka nam h kisi ka nh kisi ka rfrncr h hndler 1 callbck h hai fun jiska nam nh , time mili sec mn hota h to hm 2 sec ka time lylyty ab 2 sec bd log h krwahn gy , time out k etna time do to phr mn kam krta usky bad execute krta . set interval mn app interval mngty k 2 sec ka int do phr mn continuosly us chz ko krta jaonga , interv mtlb k breaktime ly rha k etna time do mn krta h jaonga , set time khta k etna time 2 to mn krdnga br br laga nh rhnga  -->

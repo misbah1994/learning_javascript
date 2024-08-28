@@ -56,7 +56,7 @@
 // const score = 200
 // if(score > 100){
 //     const power = 'fly'
-//     console.log(`user power: ${power}`);
+//     // console.log(`user power: ${power}`);
     
 // }
 
@@ -113,89 +113,19 @@
 //   console.log('allow to buy courses');
 
 
+// }
+// const UserLoggedIn = true
+// const debitCard = true
+// const LoggedInFromGoogle = false
+// const LoggedInFromEmail = true
 
-const UserLoggedIn = true
-const debitCard = true
-const LoggedInFromGoogle = false
-const LoggedInFromEmail = true
+// // if( UserLoggedIn && debitCard && 2==3){    //ampersand sary thk hony chahye
+// //   console.log('allow to buy courses');
+// // }
 
-if( UserLoggedIn && debitCard && 2==3){    //ampersand sary thk hony chahye
-  console.log('allow to buy courses');
-}
-
-  if(LoggedInFromGoogle || LoggedInFromEmail){
-    console.log('user logged in');
-  }
+//   if(LoggedInFromGoogle || LoggedInFromEmail){
+//     console.log('user logged in');
+//   }
   // agy ja k app conditionl randerring bhi krngy, to kya hoga app simple bology k kya user loggedin h, or ussky pass token button bhi h , to usy login button mt dikhao, us login button ki jagah uska text chng kardo or log out button dikhao
 
   //switch
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

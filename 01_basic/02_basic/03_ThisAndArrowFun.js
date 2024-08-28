@@ -10,7 +10,7 @@
          
 //     }
 // }
-// user.welcomeMessage()
+// user.welcomeMessage() //run hitesh,bwelcome to the website
 // user.username = "sammy"
 // user.welcomeMessage()
 
@@ -23,7 +23,7 @@
 //     price: 199,
 
 //     welcomeMessage: function(){
-//         console.log(`${this.username}, welcome to the website`);
+//         // console.log(`${this.username}, welcome to the website`);
 //         console.log(this);   //this current context ki bt karta 
 //     }
 // }
@@ -55,7 +55,8 @@
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this);  //woi wapis s globl values h or same sb, abk kya mn esko this.username print karskta abhi mein 1 fun mein ho
+//     console.log(this); 
+//      //woi wapis s globl values h or same sb, abk kya mn esko this.username print karskta abhi mein 1 fun mein ho, jb object hoga or phr fun to phir this. kar k access krskty , yhn nh hoga agr fun mn username hai to this. s nh hoga , yhn this.username s undefined aaraha
 // }
 // chai()
 
@@ -128,6 +129,14 @@
 // const addTwo = (num1, num2) => (num1 + num2)
 // console.log(addTwo(3, 4));
 
+
+////////////////my practice//////////////////
+// const addNumber = (num1, num2, num3) => num1 + num2 + num3
+// //or 
+// // const addNumber = (num1, num2, num3) => (num1 + num2 + num3) 
+// console.log(addNumber(4, 5, 6 ));
+
+
 //OOOOOOOOOOOOOOOOOOOOOOOOOOOOOORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 
 // const addTwo = (num1, num2) => {username: 'hitesh'}
@@ -153,9 +162,20 @@
 // (function chai(){   //ye 1 named IIFE h
 //     console.log("DB CONNECTED"); //; ye lagana hoga end karny k liye semicolon, explicitely lagaya 
 // })()                                      // es pury fun p hmny () parnthesis lagahy, jaisy uper parha jb obj declare jb () lagado to automaticlly 1 block bn jata or usmein bhi kam kia jskta hmny jb uper obj declare kia tha arrow fun mn ({username: "hitesh"})
-// interview mn globl scope k pollution s prob hoti h kahi br to us globl scope k value ya varible ko hatany k liye hmny iife ka use kia
+//interview mn globl scope k pollution s prob hoti h kahi br to us globl scope k value ya varible ko hatany k liye hmny iife ka use kia
 
-//arrow fun mm
+//my practice///
+// (function cofee(){
+//     console.log('database Connected');
+
+// })()
+
+// ((name) => {
+//     console.log('database is connected');
+
+// })('misbah')
+
+// //arrow fun mm
 
 
 // (() =>{
@@ -164,93 +184,7 @@
 
 //now suppose ye jo log hai ye 1 vaiable bhi expct karta ye unnamed iife h' 2 IIFE jb sath mn pass krty to semicolon lagaty
 
-((name) =>{
-    console.log(`DB CONNECTED TWO ${name}`);
-})("MISBAH")  //esy as a fun h dykhna ye esy execute kr rha
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ((name) =>{
+//     console.log(`DB CONNECTED TWO ${name}`);
+// })("MISBAH")  //esy as a fun h dykhna ye esy execute kr rha
 

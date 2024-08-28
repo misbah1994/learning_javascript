@@ -14,7 +14,7 @@
 
 // const coding = ['js','c++','java','python','ruby']
 // const values = coding.forEach(  (item) => {
-// console.log(item);
+// // console.log(item);
 // return item //esmein meiny kha return karo to bhi undefined or agr mn upr wala cnsol commnt krn tb bhi undefined
 // })
 // console.log(values);
@@ -77,10 +77,10 @@
 // //Chaining 2,3 mthods app drectly use krskty hoty bhi h, neechy filter lgaya mtlb jo bhi true hoga woi pass hoga
 // const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // const newNums = myNumbers
-//                .map( (num) => num * 10)
-//                .map((num) => num + 1)
-//                .filter((num) => num>= 40)
-//                console.log(newNums);
+            //    .map( (num) => num * 10)
+            //    .map((num) => num + 1)
+            //    .filter((num) => num>= 40)
+            //    console.log(newNums);
 
 // filter alg h whn true or flse wala game h, map mn sbhi return hog
 //ARRAY.REDUCE mdn s parhna' reduce mn callbck func mlta , ab fun mn appko (accumulator, current value ), accumulator ko pata h nh k mn strt khn s krn to fun k lst mn 0 value dyty
@@ -91,6 +91,15 @@
 
 // }, 0)
 // console.log(myTotal); //run 6 to mjhy hr br pata krna, accumultr mn or curval mn kya arha
+
+
+
+// const myNumber = [1, 2, 3, 4, 5, 6]
+// const myTotalNumber = myNumber.reduce(function(acc, curVal){
+//     return acc + curVal
+
+// }, 0)
+// console.log(myTotalNumber);
 //ORRRRRRRRRRRRRRRRRRR
 
 // const myNums = [1, 2, 3]
@@ -105,32 +114,32 @@
 
 // const myNums = [1, 2, 3]
 // const myTotal = myNums.reduce( (acc, curval) => acc + curval, 0)
-// console.log(myTotal); //mein koi esy ziada num nh dnga ye or uper wala dono thk hain ye smrt way or uper waly mn readibility aati
-const shoppingCart = [
-    {
-        courseName: 'js course',
-        price: 2999
-    },
-    {
-        courseName: 'python course',
-        price: 999
-    },
-    {
-        courseName: 'mobile dev course',
-        price: 5999
-    },
-    {
-        courseName: 'data scientist course',
-        price: 12000
-    },
+// // console.log(myTotal); //mein koi esy ziada num nh dnga ye or uper wala dono thk hain ye smrt way or uper waly mn readibility aati
+// const shoppingCart = [
+//     {
+//         courseName: 'js course',
+//         price: 2999
+//     },
+//     {
+//         courseName: 'python course',
+//         price: 999
+//     },
+//     {
+//         courseName: 'mobile dev course',
+//         price: 5999
+//     },
+//     {
+//         courseName: 'data scientist course',
+//         price: 12000
+//     },
     
 
-]
+// ]
 
 
 
-const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
-console.log(priceToPay);
+// const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
+// console.log(priceToPay);
 //abhi meiny esy direct krdia agy ja k app esy verify krogy
 //kahin item ki price number mn to nh, khn stringmn to nh
 

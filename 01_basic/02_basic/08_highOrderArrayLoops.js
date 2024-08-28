@@ -11,6 +11,13 @@
 //     console.log(num);  //bs num prnt krwana no incrmnt no decrmnt
 // }
 
+// const storytelling = 'brand Specialization'
+// for (const words of storytelling) 
+//     {
+//     console.log(`each character is ${words}`);
+    
+// }
+
 
 // const greetings = 'hello world!'
 // for (const greet of greetings) {
@@ -117,8 +124,8 @@
 // const programming = ['rb', 'python','js','c++']
 
 // for (const key in programming) {
-    // console.log(programming[key]);
-    //orrr
+//     console.log(programming[key]);
+    
 //     console.log(`${key} is for ${programming[key]}`);
 // }
 
@@ -156,7 +163,7 @@
 // function printMe (item){  // ye 1 item lyta appny ps or jo bhi ap esko dyty print krdyta
 // console.log(item);
 // }   
-// //kya mn es fun ko bhi pass on krskta
+// // //kya mn es fun ko bhi pass on krskta
 
 // coding.forEach(printMe)  //ya to app yhn fun likh lo phir to nam hatana parega or agr kahin or likh rkha h to printme ko as a parameter lylo, uska reference dy rahy execute nh kr rhy
 //or iteresting seekhty hn
@@ -167,24 +174,24 @@
 
 // })
 //[{}, {}, {}] ye foreach mn kafi use kia jata
-const myCoding = [
-    {
-        languageName: 'javascript',
-        languageFile: 'js'
-    }, 
-    {
-        languageName: 'java',
-        languageFile: 'java'
-    }, 
-    {
-        languageName: 'python',
-        languageFile: 'py'
-    },
+// const myCoding = [
+//     {
+//         languageName: 'javascript',
+//         languageFile: 'js'
+//     }, 
+//     {
+//         languageName: 'java',
+//         languageFile: 'java'
+//     }, 
+//     {
+//         languageName: 'python',
+//         languageFile: 'py'
+//     },
     
-]
-myCoding.forEach(   (item) => {
-console.log(item.languageName);
-})
+// ]
+// myCoding.forEach(   (item) => {
+// console.log(item.languageName);
+// })
 //appn arr k andar object k andr uski 1 value nikal li property, ab yhn to 2 valu thi maybe 20 ho, ye appky database mn bht km any wala , database s appky ps 1 arr ata arr mn mobile ka nam pricing , uska bylink ata, arr aya appky pass 10 mbl, appny sbka value inject krdia webpage p, or 1,1 webpage mn appky pass cart ajata mobile ki photo, nam or price aajati,  
 //ab ye item jo h na , ab yhn apky pass jo access h wo es obj ka h, or us obj mn ye 2 properties likhi hui h, ab us obj ka nam appny item bol dia to hr iteration mn appny usko item h bola , ab item, lang ka filenam chahye ya name, kitni asaani s appny arr k andr obj jo itself complex, 2 mnt mn uska access lylia coz your foundation strong
 

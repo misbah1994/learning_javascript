@@ -1,0 +1,103 @@
+<!-- /49 Lecture lexical scoping and closure,
+//closure ko smjhny k liye hmn lexicl scopng lgta h lgta h to closure kya h , hn to hr fun ka 1 scope hota h  to closure khta k mjhy outrFun k scope ka access ml jata h yanoi jo variable ya prop declare ki h ya fun sir n documntation s ex li thi to indentation thk kia  -->
+
+<!-- // lexical scoping  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body style="background-color: #313131;" >
+    <script>
+        // function init(){
+        //     let name = 'Mozilla'
+        //     function displayName(){
+        //         console.log(name);
+                
+        //     }
+        //     displayName()  //ye appny run kia run krny k liye kya h paranthesis
+        // }
+        // init() //phr appny main fun call krdia
+        // ab technically jo hmny prha h k hr fun ka appna 1 scope hota h or scope k bhr kuch bhi declare krty to wo available nh hota h phly hm uski jstifctin dykh lyty k aisa bhi hta h kua appni theory prov krty echy 
+        ///////////////////////////////
+        // function outer(){
+        //     let username = 'hitesh'
+        // }
+        // console.log(username);// to hmari thery to sae h k ap jo bhi fun mn variable declare krty wo outerScope mn available nh hoty 
+
+        // function outer(){
+        //     let username = 'hitesh'
+        //     function inner(){
+        //         console.log('inner', username);
+                
+        //     }
+        //     inner()  //esko meiny inner ko call krdia run krdia
+        // }
+        // outer()
+        // console.log('too outer', username);
+
+        //ab 2 jaga kr rhy hn hm username cal ,to console mn chk krty browser m // ab kh rha k inner mn to hitesh availble h but outer k lliye error dedia k usrnam is not defn , fun mn jo bhi declare kia wo outerspace mn declare nh h , hmny prha 1 globlexecution context hota phr jb app fun load krty to uska execution cntxt hota phir jb app 1 or fun krty to uska execution contxt hota , lkn yhn ye dono fun aps mn memory share kr rahy hn hm dykh skty , agr apny fun k andr fun banana to outer k variabl app access krskty h 
+        ///////////////////////////////////////////////////////////
+
+        // function outer(){
+        //     let username = 'hitesh'
+        //     function inner(){
+        //         console.log('inner', username);
+                
+        //     }
+        //     function inner2(){
+        //         console.log('inner2', username);
+                
+        //     }
+        //     inner() 
+        //     inner2() //reference hua h call krny k lliye 
+        // }
+        // outer()
+        // console.log('too outer', username); 
+        // //dono fun ko access milega smjhlain k ye prnts hain or dono child h fun , //////////////////////////////////////////////////
+
+        // function outer(){
+        //     let username = 'hitesh'
+        //     console.log(secret);
+            
+        //     function inner(){
+        //         let secret = 'my123'
+        //         console.log('inner', username);
+                
+        //     }
+        //     function inner2(){
+        //         console.log('inner2', username);
+        //         console.log(secret);
+                
+        //     }
+        //     inner() 
+        //     inner2() //reference hua h call krny k lliye 
+        // }
+        // outer()
+        // console.log('too outer', username); 
+        //bhai bhai nh share krskty agr outr h prnt h to ussy to app ly skty ho , choty papa s grndprnt s lyskty, ab secret na h outer k pass h na inner2 k pass to bry bhi choton s nh ly skty ,
+
+        // closure
+        function makeFun(){
+            const name = 'Mozilla';
+            function displayName(){
+                console.log(name);
+                
+            }
+            return displayName;
+        }
+
+        const myFun = makeFun()
+        myFun()  //run hua Mozilla
+
+//hmn abhi pata chala lexicl scoping s k inner fun k pass outerfun ka acces hota h technically 
+//ab ki br hm makefun s return kr rhy displaname ko , phly to wo whn execute ho k khtm horha tha ab appny rfrnce h pass krdia h ab scopng mn appko sochna hoga q k fun ka scope kb tk rhta jb tk wo execute hota, wo to execute hua to khtm hogya  , ab jb appny makefun() execute krdia to scope ghyb ab jb scope ghyb hogaya h to ab lexical scoping kaisy chalegi , jb tk outer fun tha tb tk h inner ko sb kch mil rha th , outr h ghyb hogaua to kesy hog , yhn interestng cncpt h js mn closure although whn s appny execution cntxt hatadiya h lkn memory ka role ajaya h , js k pass 2 h to chzn h 1 memry storre krna or single thread p execute krna, to actually mn memory k rfrnce ka role ajata yhn  , jaisy h appny makefun ko execute kia or return krdia displayname to sirf displayname nh jaega agr uska outr fun bhi exist krta h to uska bhi pura scope jaega to lexicl scopng to h he na to lexiclscopng ki waja s h wo jata h , q k displayname fun k k sath or bhi tar jhory hn , puri memory share hoti h na k sirf fun ka execution cntxt, 
+//intervie mn yhn bht log ghlti krty k uska sirf executionl cntxt jaraha to mtlb etna h jaega nh nh uska pura lexical scope jaraha , to appny ye achieve kia k app es name ko prnt karwaskty agr aisa nh hota to error ati ye name kbhi prnt h nh hota q k name to outerfun mn th , inner mn to th nh to ab dspl hoga , interviwe mn lexical scope bolna h , ab 1 dosri script bana lyty hn jee jee bna sky usmn krty hn prcticl exmple
+
+    </script>
+    
+ </body>
+ </html>
+ 
